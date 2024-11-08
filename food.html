@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+
+      /* Main container styling */
+      .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      /* Title styling */
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #4CAF50;
+      }
+
+      /* Input field styling */
+      input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="number"]:focus {
+        border-color: #4CAF50;
+        outline: none;
+      }
+
+      /* Button styling */
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+
+      /* Result display styling */
+      #showResult {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #333;
+      }
+
+      /* Responsive styling for small screens */
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px;
+          width: 90%;
+        }
+
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        input[type="number"], button {
+          font-size: 1rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Score Checker</h1>
+      <input type="number" placeholder="Input the score.value" id="score">
+      <button onclick="chechscore()">Check</button>
+      <div id="showResult">Result will show here</div>
+    </div>
+    <script>
+    //   function chechscore() {
+    //     console.log(score.value)
+    // if (score.value >= 0 && score.value < 40) {
+    //     console.log('F');
+    //     showResult.innerHTML = 'F'
+    //   } else if (score.value >= 40 && score.value < 50) {
+    //     console.log('E');
+    //   } else if (score.value >= 50 && score.value < 60) {
+    //     console.log('D');
+    //   } else if (score.value >= 60 && score.value < 70) {
+    //     console.log('C');
+    //   } else if (score.value >= 70 && score.value < 80) {
+    //     console.log('B');
+    //   } else if (score.value >= 80 && score.value <= 100) {
+    //     console.log('A');
+    //   } else {
+    //     console.log('invalid');
+    //   }
+    //   console.log(showResult.innerHTML);
+// }
+    //  Logging the result of the innerHTML of showResult
+    // console.log(document.getElementById('showResult').innerHTML);
+
+    function chechscore() {
+      const score = document.getElementById('score');
+      const showResult = document.getElementById('showResult');
+      console.log(score.value);
+
+      if (score.value >= 0 && score.value < 40) {
+        console.log('F');
+        showResult.innerHTML = 'F';
+        showResult.style.color = 'red'; // Change the result color to red for 'F'
+      } else if (score.value >= 40 && score.value < 50) {
+        console.log('E');
+        showResult.innerHTML = 'E';
+        showResult.style.color = 'orange'; // Change the result color to orange for 'E'
+      } else if (score.value >= 50 && score.value < 60) {
+        console.log('D');
+        showResult.innerHTML = 'D';
+        showResult.style.color = 'yellow'; // Change the result color to yellow for 'D'
+      } else if (score.value >= 60 && score.value < 70) {
+        console.log('C');
+        showResult.innerHTML = 'C';
+        showResult.style.color = 'green'; // Change the result color to green for 'C'
+      } else if (score.value >= 70 && score.value < 80) {
+        console.log('B');
+        showResult.innerHTML = 'B';
+        showResult.style.color = 'blue'; // Change the result color to blue for 'B'
+      } else if (score.value >= 80 && score.value <= 100) {
+        console.log('A');
+        showResult.innerHTML = 'A';
+        showResult.style.color = 'darkblue'; // Change the result color to dark blue for 'A'
+      } else {
+        console.log('invalid');
+        showResult.innerHTML = 'Invalid score. Please enter a valid number between 0 and 100.';
+        showResult.style.color = 'red'; // Show an error message if invalid input
+      }
+    }
+    //   var food = "Spaghetti Bolognese";
+    //   var restaurant = false;
+    
+    //   if (restaurant == true) {
+    //     if (food == "Spaghetti Bolognese") {
+    //       console.log("Buy it");
+    //     } else {
+    //       console.log("Don't buy it");
+    //     }
+    //   } else {
+    //     console.log("I will go hungry");
+    //   }
+    
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
